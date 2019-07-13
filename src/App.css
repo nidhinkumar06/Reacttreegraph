@@ -1,33 +1,78 @@
-.App {
-  text-align: center;
+.node circle {
+	fill: rgb(247, 106, 214);
+	stroke: rgb(184, 37, 81);
+	stroke-width: 1.5px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.node text {
+	font-size: 11px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: black;
+	fill: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.node {
+	cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+path.link {
+	fill: none;
+	stroke: #2593B8;
+	stroke-width: 1.5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+	background-color: white;
+	overflow: hidden;
+}
+
+span {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #F4F4F4;
+	text-shadow: 0 1px 4px black;
+	float: right;
+}
+
+.red {
+	fill: none;
+	stroke: red;
+	stroke-width: 1.5px;
+	stroke-dasharray: 5;
+}
+
+.yellow{
+	fill: none;
+	stroke: yellow;
+	stroke-width: 1.5px;
+}
+
+.grey{
+	fill: none;
+	stroke: grey;
+	stroke-width: 1.5px;
+}
+
+.black{
+	fill: none;
+	stroke: black;
+	stroke-width: 1.5px;
+}
+
+.blue{
+	fill: none;
+	stroke: blue;
+	stroke-width: 1.5px;
+}
+
+.green{
+	fill: none;
+	stroke: green;
+	stroke-dasharray: 5;
+	stroke-width: 1.5px;
+}
+
+.purple{
+	fill: none;
+	stroke: purple;
+	stroke-width: 1.5px;
 }

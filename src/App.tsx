@@ -1,25 +1,29 @@
+import clone from 'clone';
 import React from 'react';
-import logo from './logo.svg';
+import Tree from 'react-tree-graph';
+import data from './data';
+import lodash from 'lodash';
+import 'react-tree-graph/dist/style.css'
 import './App.css';
 
-const App: React.FC = () => {
+const App: React.FC = (props: any) => {
+  const handleClick = (event: any, node: any) => {
+    console.log('handle click ', event);
+    console.log('handle click node', node);
+    alert(`${node} got clicked`);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Tree
+      animated={true}
+      data={data}
+      nodeRadius={15}
+      margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
+      gProps={{
+					className: 'node',
+					onClick: handleClick
+				}}
+	    height={700}
+	    width={1000}/>
   );
 }
 
